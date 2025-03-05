@@ -1,0 +1,17 @@
+.Link {
+    background-color: #33cccc;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    border: 2px solid white;
+    font-weight: 400;
+    transition: all 0.3s;
+    border-radius: 300px;
+    text-decoration: none;
+}
+.Link:hover {
+    color: #000000;
+    background-color: white;
+}

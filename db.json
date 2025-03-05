@@ -1,0 +1,176 @@
+{
+  "projects": [
+    {
+      "nomeDoProjeto": "E-commerce PetShop",
+      "budgetDoProjeto": 50000,
+      "categoriaDoProjeto": "Desenvolvimento",
+      "servicos": [
+        {
+          "nome": "Desenvolvimento Frontend",
+          "orcamento": 20000,
+          "descricao": "Desenvolvimento da interface do usuário com React"
+        },
+        {
+          "nome": "Backend API",
+          "orcamento": 30000,
+          "descricao": "Desenvolvimento da API REST"
+        }
+      ],
+      "id": "001a"
+    },
+    {
+      "nomeDoProjeto": "Redesign Site Corporativo",
+      "budgetDoProjeto": 30000,
+      "categoriaDoProjeto": "Design",
+      "servicos": [
+        {
+          "nome": "UI/UX Design",
+          "orcamento": 15000,
+          "descricao": "Criação de novo layout e experiência do usuário"
+        }
+      ],
+      "id": "002b"
+    },
+    {
+      "nomeDoProjeto": "App Delivery",
+      "budgetDoProjeto": 80000,
+      "categoriaDoProjeto": "Desenvolvimento",
+      "servicos": [
+        {
+          "nome": "Desenvolvimento Mobile",
+          "orcamento": 45000,
+          "descricao": "Desenvolvimento de aplicativo iOS e Android"
+        },
+        {
+          "nome": "Sistema de Pagamento",
+          "orcamento": 35000,
+          "descricao": "Integração com gateway de pagamento"
+        }
+      ],
+      "id": "003c"
+    },
+    {
+      "nomeDoProjeto": "Campanha Marketing Digital",
+      "budgetDoProjeto": 25000,
+      "categoriaDoProjeto": "Marketing",
+      "servicos": [
+        {
+          "nome": "Gestão de Redes Sociais",
+          "orcamento": 10000,
+          "descricao": "Criação e gestão de conteúdo para redes sociais"
+        },
+        {
+          "nome": "Google Ads",
+          "orcamento": 15000,
+          "descricao": "Campanha de anúncios no Google"
+        }
+      ],
+      "id": "004d"
+    },
+    {
+      "nomeDoProjeto": "Sistema de Gestão",
+      "budgetDoProjeto": 100000,
+      "categoriaDoProjeto": "Desenvolvimento",
+      "servicos": [
+        {
+          "nome": "Desenvolvimento do Sistema",
+          "orcamento": 70000,
+          "descricao": "Sistema ERP completo"
+        },
+        {
+          "nome": "Treinamento",
+          "orcamento": 30000,
+          "descricao": "Capacitação da equipe"
+        }
+      ],
+      "id": "005e"
+    },
+    {
+      "nomeDoProjeto": "Identidade Visual",
+      "budgetDoProjeto": 15000,
+      "categoriaDoProjeto": "Design",
+      "servicos": [
+        {
+          "nome": "Logo e Manual de Marca",
+          "orcamento": 8000,
+          "descricao": "Criação de logotipo e manual de identidade visual"
+        },
+        {
+          "nome": "Material Gráfico",
+          "orcamento": 7000,
+          "descricao": "Desenvolvimento de papelaria e materiais promocionais"
+        }
+      ],
+      "id": "006f"
+    },
+    {
+      "nomeDoProjeto": "Infraestrutura Cloud",
+      "budgetDoProjeto": 60000,
+      "categoriaDoProjeto": "Infraestrutura",
+      "servicos": [
+        {
+          "nome": "Migração para AWS",
+          "orcamento": 40000,
+          "descricao": "Migração completa para ambiente cloud"
+        },
+        {
+          "nome": "Monitoramento",
+          "orcamento": 20000,
+          "descricao": "Implementação de sistema de monitoramento"
+        }
+      ],
+      "id": "007g"
+    },
+    {
+      "nomeDoProjeto": "App Fitness",
+      "budgetDoProjeto": 45000,
+      "categoriaDoProjeto": "Desenvolvimento",
+      "servicos": [
+        {
+          "nome": "Desenvolvimento App",
+          "orcamento": 35000,
+          "descricao": "Aplicativo de treinos e dietas"
+        },
+        {
+          "nome": "Design de Interface",
+          "orcamento": 10000,
+          "descricao": "Design de telas e experiência do usuário"
+        }
+      ],
+      "id": "008h"
+    },
+    {
+      "nomeDoProjeto": "SEO e Performance",
+      "budgetDoProjeto": 20000,
+      "categoriaDoProjeto": "Marketing",
+      "servicos": [
+        {
+          "nome": "Otimização SEO",
+          "orcamento": 12000,
+          "descricao": "Otimização para mecanismos de busca"
+        },
+        {
+          "nome": "Performance Web",
+          "orcamento": 8000,
+          "descricao": "Melhorias de velocidade e desempenho"
+        }
+      ],
+      "id": "009i"
+    }
+    
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Desing"
+    }
+  ]
+}

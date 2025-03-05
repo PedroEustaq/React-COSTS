@@ -1,0 +1,27 @@
+.meio {
+    width: 100%;
+    min-height: 75vh;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    background-color: #f8f9fa;
+    background-image: url("/public/PlanAma.jpg");
+    animation: slideBackground 60s linear infinite alternate;
+    background-size: 150%;
+}
+@keyframes slideBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

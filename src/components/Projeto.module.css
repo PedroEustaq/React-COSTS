@@ -1,0 +1,290 @@
+.meio {
+    width: 100%;
+    min-height: 75vh;
+    padding-top: 30px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    background-color: #f8f9fa;
+    background-image: url("/public/PlanAma.jpg");
+    animation: slideBackground 60s linear infinite alternate;
+    background-size: 150%;
+}
+
+.centro {
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.121);
+    border-radius: 10px;
+    min-height: 620px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.flexProjeto {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.caixa {
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 187, 51, 0.1);
+    width: 270px;
+    height: 200px;
+    margin: 5px
+}
+
+.caixa:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(255, 187, 51, 0.15);
+}
+
+.caixa::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #ffbb33;
+    border-radius: 4px 0 0 4px;
+}
+
+.projetoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.projetoTitulo {
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.projetoInfo {
+    margin: 1.5rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.orcamento {
+    background-color: rgba(116, 255, 51, 0.449);
+    color: #2c3e50;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+}
+
+
+
+.categoria {
+    background-color: #ffbb33;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botoesContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btnEditar,
+.btnExcluir {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btnEditar {
+    background-color: #ffbb33;
+    color: #fff;
+}
+
+.btnEditar:hover {
+    background-color: #ffa500;
+    transform: scale(1.02);
+}
+
+.btnExcluir {
+    background-color: #fff;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+.btnExcluir:hover {
+    background-color: #dc3545;
+    color: #fff;
+    transform: scale(1.02);
+}
+
+.containerPesq {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #efefef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pesqFiltra {
+    flex: 1;
+    padding: 12px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.pesqFiltra:focus {
+    border-color: #ffbb33;
+}
+
+.containerPesq button {
+    padding: 8px 16px;
+    background-color: #ffbb33;
+    color: #222;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.containerPesq button:hover {
+    background-color: #ffaa00;
+}
+
+.containerPesq .outroBTN {
+    background-color: #446cf3;
+    color: white;
+}
+
+.containerPesq .outroBTN:hover {
+    background-color: #222;
+}
+
+.semContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+}
+
+.semContainer img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    opacity: 0.7;
+    animation: float 3s ease-in-out infinite;
+}
+
+.naoHa {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .semContainer {
+        min-height: 200px;
+        padding: 20px;
+    }
+
+    .semContainer img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .naoHa {
+        font-size: 1rem;
+    }
+    .centro {
+        width: 90%;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerPesq {
+        width: 90%;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: start;
+    }
+}

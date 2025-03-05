@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Inter:opsz@14..32&family=Karla&family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  overflow-x: hidden;
+}
+section.images-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 255, 0);
+  width: 100%;
+  overflow: hidden;
+}
+
+section.images-section>img {
+  width: 200px;
+  transform: translateY(40px);
+  margin-left: -20px;
+}
+
+section.images-section>img:nth-child(1) {
+  transform: translateY(50px);
+}
+
+section.images-section>img:nth-child(2) {
+  transform: translateY(30px);
+}
+
+section.images-section>img:nth-child(3) {
+  transform: translateY(80px);
+}
+
+section.images-section>img:nth-child(4) {
+  transform: translateY(30px);
+}
+
+section.images-section>img:nth-child(5) {
+  transform: translateY(50px);
+}
+
+section.images-section>img:nth-child(6) {
+  transform: translateY(30px);
+}
+
+
+
+.create-button {
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.836);
+  border: 0px solid white;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.create-button:hover {
+  cursor: pointer;
+}
+
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  border: 1px solid rgba(0, 0, 0, 0.405);
+  padding: 10px;
+  
+}
+
+
+

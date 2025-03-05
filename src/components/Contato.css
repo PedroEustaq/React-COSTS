@@ -1,0 +1,124 @@
+.contato-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2f2f2f;
+    color: whitesmoke;
+}
+
+.contato-container h2 {
+    text-align: center;
+    color: whitesmoke;
+    margin-left: 0px;
+}
+
+.contato-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.contato-form {
+    flex: 1;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.contato-info {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.contato-info h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contato-info p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.contato-info i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato-content {
+        flex-direction: column;
+    }
+    .contato-container {
+        width: 100%;
+        padding: 0px;
+        padding-top: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .contato-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+    }
+    form > div {
+        width: 80%;
+    }
+    .form-group > input {
+        width: 100%;
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .form-group > textarea {
+        width: 100%;
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
