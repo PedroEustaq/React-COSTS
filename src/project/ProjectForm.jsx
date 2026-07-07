@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import styles from "./ProjectForm.module.css"
-import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import api from "../services/api";
 
 export default function ProjectForm() {
     const [categoriaEscolhida, setCategoriaEscolhida] = useState("")
@@ -36,10 +36,10 @@ export default function ProjectForm() {
 
     //Pega dados do API REST
     useEffect(() => {
-        axios.get("http://localhost:5234/projects")
+        api.get("/projects")
         .then(resposta => setProjetos(resposta.data))
         .catch((err) => console.log(err))
-    })
+    }, [])
 
     //Muda clicar em uma categoria, seleciona ela
     const handleCategoriaChange = (e) => {
@@ -61,9 +61,12 @@ export default function ProjectForm() {
         servicos: []
         }
 
-        axios.post("http://localhost:5234/projects", Projeto)
-        .then(resposta => setProjetos([...Projetos], resposta.data))
-        navigate('/projeto');
+        api.post("/projects", Projeto)
+        .then(resposta => {
+            setProjetos([...Projetos, resposta.data])
+            navigate('/projeto');
+        })
+        .catch((err) => console.log(err));
     }
 
     return (

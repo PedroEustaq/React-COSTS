@@ -1,9 +1,9 @@
 import Cabecalho from "./Cabecalho";
 import Rodape from "./Rodape";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import styles from "./Projeto.module.css";
 import { useNavigate } from "react-router-dom";
+import api from "../services/api";
 
 export default function Projeto() {
 
@@ -24,10 +24,10 @@ export default function Projeto() {
 
     //Pega dados do API REST
     useEffect(() => {
-        axios.get("http://localhost:5234/projects")
+        api.get("/projects")
             .then(resposta => {
                 setProjetos(resposta.data);
-                setProjetosFiltrados(resposta.data); // Inicialmente, mostra todos os projetos
+                setProjetosFiltrados(resposta.data);
             })
             .catch((err) => console.log(err))
     }, []);
@@ -45,7 +45,7 @@ export default function Projeto() {
     }
     // Função para buscar projetos
     const fetchProjetos = () => {
-        axios.get("http://localhost:5234/projects")
+        api.get("/projects")
             .then(resposta => {
                 setProjetos(resposta.data);
                 setProjetosFiltrados(resposta.data);
@@ -60,9 +60,8 @@ export default function Projeto() {
 
     // Função para deletar modificada
     const deletarServico = (id) => {
-        axios.delete(`http://localhost:5234/projects/${id}`)
+        api.delete(`/projects/${id}`)
             .then(() => {
-                // Atualiza ambos os estados após deletar
                 const projetosAtualizados = Projetos.filter(obj => obj.id !== id);
                 setProjetos(projetosAtualizados);
                 setProjetosFiltrados(projetosAtualizados);

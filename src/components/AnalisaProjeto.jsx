@@ -3,7 +3,7 @@ import Cabecalho from './Cabecalho';
 import Rodape from './Rodape';
 import { useState, useEffect } from 'react';
 import styles from './AnalisaProjeto.module.css';
-import axios from 'axios';
+import api from '../services/api';
 
 export default function AnalisaProjeto() {
     const location = useLocation();
@@ -38,7 +38,7 @@ export default function AnalisaProjeto() {
             const servicosAtualizados = servicos.filter((_, i) => i !== index);
 
             // Atualiza o projeto no backend com o novo array de serviços
-            axios.put(`http://localhost:5234/projects/${id}`, {
+            api.put(`/projects/${id}`, {
                 nomeDoProjeto: nome,
                 budgetDoProjeto: budget,
                 categoriaDoProjeto: categoria,
@@ -60,7 +60,7 @@ export default function AnalisaProjeto() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.put(`http://localhost:5234/projects/${id}`, {
+        api.put(`/projects/${id}`, {
             nomeDoProjeto: nome,
             budgetDoProjeto: budget,
             categoriaDoProjeto: categoria,
@@ -76,7 +76,7 @@ export default function AnalisaProjeto() {
 
     // Busca os serviços atuais do projeto
     useEffect(() => {
-        axios.get(`http://localhost:5234/projects/${id}`)
+        api.get(`/projects/${id}`)
             .then(response => {
                 if (response.data.servicos) {
                     setServicos(response.data.servicos);
@@ -98,7 +98,7 @@ export default function AnalisaProjeto() {
         // Cria um novo array com todos os serviços existentes mais o novo
         const servicosAtualizados = [...servicos, novoServ];
 
-        axios.put(`http://localhost:5234/projects/${id}`, {
+        api.put(`/projects/${id}`, {
             nomeDoProjeto: nome,
             budgetDoProjeto: budget,
             categoriaDoProjeto: categoria,
@@ -119,9 +119,9 @@ export default function AnalisaProjeto() {
 
     }
     const handleEditarProjeto = (e) => {
-        e.preventDefault(); // Previne o comportamento padrão do formulário
+        e.preventDefault();
 
-        axios.put(`http://localhost:5234/projects/${id}`, {
+        api.put(`/projects/${id}`, {
             nomeDoProjeto: nome,
             budgetDoProjeto: budget,
             categoriaDoProjeto: categoria,
@@ -129,7 +129,7 @@ export default function AnalisaProjeto() {
         })
             .then(response => {
                 console.log('Projeto atualizado com sucesso!');
-                setTaEditando(false); // Volta para o modo de visualização
+                setTaEditando(false);
             })
             .catch(error => {
                 console.error('Erro ao atualizar:', error);

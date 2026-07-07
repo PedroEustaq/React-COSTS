@@ -4,10 +4,23 @@ import Contato from './components/Contato'
 import Empresa from './components/Empresa'
 import NovoProjeto from './components/NovoProjeto'
 
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Projeto from './components/Projeto'
 import AnalisaProjeto from './components/AnalisaProjeto'
+import { useEffect } from 'react'
+import { limparProjetos } from './services/api'
+
 function App() {
+  useEffect(() => {
+    limparProjetos();
+
+    const intervalId = window.setInterval(() => {
+      limparProjetos();
+    }, 5 * 60 * 1000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   return (
     <>
     <BrowserRouter>
